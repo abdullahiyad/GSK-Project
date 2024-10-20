@@ -1,0 +1,92 @@
+/* header section */
+header{
+    display:flex;
+    justify-content: space-between;
+}
+
+/* contains logo and title */
+.header-logo-and-title-div{
+    display:flex;
+    flex-direction: row;
+}
+
+/* contains nav links and sun icon */
+.header-links-and-icon-div{
+    display:flex;
+    align-items: center;
+    gap:20px;
+}
+
+/* website title */
+#website-name{
+    font-family:"Rethink Sans", sans-serif;
+    color:#595656;
+}
+
+/* nav links style */
+.navigation-links{
+    font-family:"Rethink Sans", sans-serif;
+    color:#595656;
+    text-decoration: none;
+    font-size:15pt;
+    padding-left: 25px;
+}
+
+/* light/dark mode icon */
+.bi-brightness-high{
+    font-size:25px;
+}
+
+/* containing all items in hero section */
+#hero-section-div{
+    display:flex;
+    align-items: center;
+}
+
+/* the welcome texts */
+.header-text-h1{
+    font-family: "Agbalumo", system-ui;
+    color:#545050;
+    text-align: center;
+    font-size: 50pt;
+    /* border: 2px solid red; */
+    margin:0px;
+}
+
+.header-text-h2{
+    font-family: "Agbalumo", system-ui;
+    color:#545050;
+    font-size: 25pt;
+    /* border: 2px solid blue; */
+    margin-bottom:40px;
+}
+
+/* right side content of hero section */
+.right-side-content-div{
+    display:flex;
+    flex-direction: column;
+    align-items:flex-start;
+    /* border:2px solid green; */
+}
+
+/* search bar and icon */
+#hero-section-div div .search-bar-div{
+    display:flex;
+    flex-direction: row;
+    gap:10px;
+    align-items: center;
+}
+
+/* search bar icon */
+.bi-search{
+    font-size: 30pt;
+}
+
+/* search bar */
+#search-bar{
+    padding:20px;
+    width:500px;
+    border-radius: 50px;
+    background-color: #E3E3E3;
+    border:none;
+}
