@@ -2,6 +2,7 @@
 header{
     display:flex;
     justify-content: space-between;
+    border-bottom: 1px solid black;
 }
 
 /* contains logo and title */
@@ -49,7 +50,6 @@ header{
     color:#545050;
     text-align: center;
     font-size: 50pt;
-    /* border: 2px solid red; */
     margin:0px;
 }
 
@@ -57,7 +57,6 @@ header{
     font-family: "Agbalumo", system-ui;
     color:#545050;
     font-size: 25pt;
-    /* border: 2px solid blue; */
     margin-bottom:40px;
 }
 
@@ -66,7 +65,6 @@ header{
     display:flex;
     flex-direction: column;
     align-items:flex-start;
-    /* border:2px solid green; */
 }
 
 /* search bar and icon */
@@ -89,4 +87,60 @@ header{
     border-radius: 50px;
     background-color: #E3E3E3;
     border:none;
+}
+
+/* general class for all the sections */
+.sections{
+    margin-left: 100px;
+}
+
+/* section titles */
+.section-title{
+    font-family: "Agbalumo", system-ui;
+    font-size: 25pt;
+    background: linear-gradient(#c86c02, #FDC746);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* contains all movie poster divs */
+.container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* div for one movie poster */
+.movie-poster-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* image inside the movie poster div */
+.movie-poster-div img{
+    width:200px;
+    border-radius: 20px;
+}
+
+/* movie title inside movie poster div */
+.movie-poster-div h3{
+    font-family:"Rethink Sans", sans-serif;
+    color:#595656;
+}
+
+.categories-and-button-div{
+    display: flex;
+    flex-direction: column;
+    /* border:2px solid red; */
+}
+
+/* see all movies button */
+#see-all-movies-btn{
+    width:90%;
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin:20px;
+    height:150px;
 }
