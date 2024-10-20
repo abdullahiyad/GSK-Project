@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-/* header section */
+/* -------------------------------------------- Start header section--------------------------------------------------------------------------- */
 header{
     display:flex;
     justify-content: space-between;
@@ -23,10 +23,14 @@ header::after{
 /* contains logo and title */
 .header-logo-and-title-div{
     display:flex;
-    flex-direction: row;
+    justify-content: center;
 }
-
-/* contains nav links and sun icon */
+/* website title */
+.header-logo-and-title-div #website-name{
+    font-family:"Rethink Sans", sans-serif;
+    color:#595656;
+}
+/* nav style */
 nav ul{
     display:flex;
     align-items: center;
@@ -42,7 +46,22 @@ nav ul li{
 nav ul li:not(:nth-child(3)) .navigation-links:hover{
     color:#f8660b;
 }
-nav ul .movie-Categories{
+/* nav links style */
+.navigation-links{
+    font-family:"Rethink Sans", sans-serif;
+    color:#595656;
+    text-decoration: none;
+    font-size:15pt;
+    padding-left: 25px;
+    display: block;
+    transition: 0.3s all;
+}
+nav ul .movie-Categories li{
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+nav ul .movie-list .movie-Categories{
     position: absolute;
     flex-direction: column;
     justify-content: center;
@@ -58,10 +77,11 @@ nav ul .movie-Categories{
 nav ul .movie-list:hover .movie-Categories{
     display:flex;
 }
-nav ul .movie-Categories li{
-    position: relative;
-    width: 100%;
-    text-align: center;
+nav ul .movie-list .movie-Categories .movie-Categories-link{
+    font-family:"Rethink Sans", sans-serif;
+    color:#595656;
+    text-decoration: none;
+    font-size:15pt;
 }
 nav ul .movie-Categories li:not(:last-child)::after{
     content: '';
@@ -77,28 +97,17 @@ nav ul .movie-Categories li a{
     text-decoration: none;
     color:#595656;
 }
+
 header .sun-icon{
     display:flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 }
-/* website title */
-#website-name{
-    font-family:"Rethink Sans", sans-serif;
-    color:#595656;
-}
+/* ----------------------------------------------------------------End Header Section---------------------------------------------------------------- */
 
-/* nav links style */
-.navigation-links{
-    font-family:"Rethink Sans", sans-serif;
-    color:#595656;
-    text-decoration: none;
-    font-size:15pt;
-    padding-left: 25px;
-    display: block;
-    transition: 0.3s all;
-}
+
+
 
 /* light/dark mode icon */
 .bi-brightness-high{
