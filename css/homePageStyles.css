@@ -72,7 +72,7 @@ nav ul .movie-list .movie-Categories{
     padding:10px;
     display:none;
     z-index: 1;
-    min-width: 120px;
+    min-width: 150px;
 }
 nav ul .movie-list:hover .movie-Categories{
     display:flex;
@@ -82,13 +82,17 @@ nav ul .movie-list .movie-Categories .movie-Categories-link{
     color:#595656;
     text-decoration: none;
     font-size:15pt;
+    transition: 0.3s all;
+}
+nav ul .movie-list .movie-Categories .movie-Categories-link:hover{
+    color:#f8660b;
 }
 nav ul .movie-Categories li:not(:last-child)::after{
     content: '';
     position: absolute;
     top: 30px;
-    left: -9px;
-    width: 119%;
+    left: -11px;
+    width: 116%;
     height: 1px;
     background-color: black;
     z-index: 1;
