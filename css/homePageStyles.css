@@ -1,8 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+
 /* header section */
 header{
     display:flex;
     justify-content: space-between;
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
+    height: 50px;
+    position: relative;
+}
+header::after{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: black;
 }
 
 /* contains logo and title */
@@ -12,12 +27,62 @@ header{
 }
 
 /* contains nav links and sun icon */
-.header-links-and-icon-div{
+nav ul{
     display:flex;
     align-items: center;
     gap:20px;
+    list-style: none;
+
+}
+nav ul li{
+    position: relative;
+    margin-bottom: 5px;
 }
 
+nav ul li:not(:nth-child(3)) .navigation-links:hover{
+    color:#f8660b;
+}
+nav ul .movie-Categories{
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border:1px solid black;
+    border-radius: 5px;
+    padding:10px;
+    display:none;
+    z-index: 1;
+    min-width: 120px;
+}
+nav ul .movie-list:hover .movie-Categories{
+    display:flex;
+}
+nav ul .movie-Categories li{
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+nav ul .movie-Categories li:not(:last-child)::after{
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: -9px;
+    width: 119%;
+    height: 1px;
+    background-color: black;
+    z-index: 1;
+}
+nav ul .movie-Categories li a{
+    text-decoration: none;
+    color:#595656;
+}
+header .sun-icon{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
 /* website title */
 #website-name{
     font-family:"Rethink Sans", sans-serif;
@@ -31,6 +96,8 @@ header{
     text-decoration: none;
     font-size:15pt;
     padding-left: 25px;
+    display: block;
+    transition: 0.3s all;
 }
 
 /* light/dark mode icon */

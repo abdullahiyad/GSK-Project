@@ -27,17 +27,30 @@
             <img src="../images/logo.png" alt="logo" width="70px">
             <h3 id="website-name">Phoenix Movies</h3>
         </div>
-        <div class="header-links-and-icon-div">
-            <nav>
-                <a class="navigation-links" href="./homePage.html">Home</a>
-                <a class="navigation-links" href="#aboutSection">About</a>
-                <a class="navigation-links" href="./movies.html">Movies</a>
-                <a class="navigation-links" href="./favourites.html">My List</a>
-            </nav>
+        <!-- <div class="header-links-and-icon-div"> -->
+        <nav>
+            <ul>
+                <li><a class="navigation-links" href="./homePage.html">Home</a></li>
+                <li><a class="navigation-links" href="#aboutSection">About</a></li>
+                <li class="movie-list">
+                    <a class="navigation-links " href="./movies.html">Movies</a>
+                    <ul class="movie-Categories" >
+                        <li><a href="#">Fantasy</a></li>
+                        <li><a href="#">Horror</a></li>
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Adventures</a></li>
+                        <li><a href="#">Comedy</a></li>
+                        <li><a href="#">See All Movies</a></li>
+                    </ul>
+                </li>
+                <li><a class="navigation-links" href="./favourites.html">My List</a></li>
+            </ul>      
+        </nav>
+        <div class="sun-icon">
             <i class="bi bi-brightness-high"></i>
         </div>
+        <!-- </div> -->
     </header>
-
     <main>
         <div id="hero-section-div">
             <img src="../images/home page.png" alt="hero Section Image" width="800px" id="img">
