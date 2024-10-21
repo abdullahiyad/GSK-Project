@@ -1,0 +1,13 @@
+# use css variables
+# just write a clear class , not a newspaper
+# best practice use the id for js
+# padding of all section will be the same 
+# when we want to generic something we put it in the top not in bottom
+# give padding for section , the padding should be the same for all sections 
+=> u can just use 
+section{
+    padding : paddingvalue;
+}
+# give trending titles some margin from top and bottom
+# minimize the gap between movies cards
+#
