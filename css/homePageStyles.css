@@ -1,63 +1,140 @@
-/* header section */
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(20, 50%, 98%);
+}
+/* -------------------------------------------- Start header section--------------------------------------------------------------------------- */
 header{
     display:flex;
     justify-content: space-between;
-    border-bottom: 1px solid black;
+    align-items: center;
+    /* border-bottom: 1px solid black; */
+    height: 50px;
+    position: relative;
+    margin: 10px 20px 0;
+}
+header::after{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: black;
 }
 
 /* contains logo and title */
 .header-logo-and-title-div{
     display:flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
-
-/* contains nav links and sun icon */
-.header-links-and-icon-div{
+/* website title */
+.header-logo-and-title-div #website-name{
+    font-family:"Kumbh Sans", sans-serif;
+    color:black;
+    font-size: 25px;
+}
+/* nav style */
+nav ul{
     display:flex;
     align-items: center;
     gap:20px;
+    list-style: none;
+
+}
+nav ul li{
+    position: relative;
+    margin-bottom: 5px;
 }
 
-/* website title */
-#website-name{
-    font-family:"Rethink Sans", sans-serif;
-    color:#595656;
+nav ul li:not(:nth-child(3)) .navigation-links:hover{
+    color:#ffa600;
 }
-
 /* nav links style */
 .navigation-links{
     font-family:"Rethink Sans", sans-serif;
     color:#595656;
     text-decoration: none;
-    font-size:15pt;
+    font-size:25px;
     padding-left: 25px;
+    display: block;
+    transition: 0.3s all;
+}
+nav ul .movie-Categories li{
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+nav ul .movie-list .movie-Categories{
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border:1px solid black;
+    border-radius: 5px;
+    padding:10px;
+    display:none;
+    z-index: 1;
+    min-width: 150px;
+}
+nav ul .movie-list:hover .movie-Categories{
+    display:flex;
+}
+nav ul .movie-list .movie-Categories .movie-Categories-link{
+    font-family:"Rethink Sans", sans-serif;
+    color:#595656;
+    text-decoration: none;
+    font-size:15pt;
+    transition: 0.3s all;
+}
+nav ul .movie-list .movie-Categories .movie-Categories-link:hover{
+    color:#ffa600;
+}
+nav ul .movie-Categories li:not(:last-child)::after{
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: -11px;
+    width: 116%;
+    height: 1px;
+    background-color: rgb(136, 136, 136);
+    z-index: 1;
+}
+nav ul .movie-Categories li a{
+    text-decoration: none;
+    color:#595656;
 }
 
+header .sun-icon{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+}
 /* light/dark mode icon */
 .bi-brightness-high{
     font-size:25px;
 }
-
+/* ----------------------------------------------------------------End Header Section---------------------------------------------------------------- */
+/* ----------------------------------------------------------------main section----------------------------------------------------------------- */
+main{
+    margin: 0 20px ; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 /* containing all items in hero section */
 #hero-section-div{
     display:flex;
     align-items: center;
-}
-
-/* the welcome texts */
-.header-text-h1{
-    font-family: "Agbalumo", system-ui;
-    color:#545050;
-    text-align: center;
-    font-size: 50pt;
-    margin:0px;
-}
-
-.header-text-h2{
-    font-family: "Agbalumo", system-ui;
-    color:#545050;
-    font-size: 25pt;
-    margin-bottom:40px;
+    justify-content: center;
+    height: calc(100vh - 50px);
+    margin-bottom: 0;
 }
 
 /* right side content of hero section */
@@ -66,52 +143,96 @@ header{
     flex-direction: column;
     align-items:flex-start;
 }
+/* the welcome texts */
+.header-text-h1{
+    font-family: "Agbalumo", system-ui;
+    color:#322D2D;
+    text-align: center;
+    font-size: 60px;
+    margin:0px;
+}
+
+.header-text-h2{
+    font-family: "Agbalumo", system-ui;
+    color:#545050;
+    font-size: 40px;
+    margin-bottom:40px;
+}
 
 /* search bar and icon */
-#hero-section-div div .search-bar-div{
+#hero-section-div .right-side-content-div .search-bar-div{
     display:flex;
-    flex-direction: row;
     gap:10px;
+    align-items: center;
+    
+}
+#hero-section-div .right-side-content-div .search-bar-div .search-icon{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: #E3E3E3;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-/* search bar icon */
 .bi-search{
-    font-size: 30pt;
+    font-size: 35px;
+    color: #bcbcbc;
+    cursor: pointer;
 }
-
-/* search bar */
-#search-bar{
+.search-bar-div input{
+    font-size: 20px;
+    border: none;
+    outline: none;
     padding:20px;
     width:500px;
     border-radius: 50px;
     background-color: #E3E3E3;
-    border:none;
+}
+.search-bar-div input::placeholder{
+    font-size: 20px;
+    
 }
 
+/* ------------------------------------------------------------------hero-section-div----------------------------------------------------------------- */
 /* general class for all the sections */
-.sections{
+/* .sections{
     margin-left: 100px;
+} */
+#trending-section{
+    margin-top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
-
+#trending-movies-section{
+    height: 50% ;
+    display: flex;
+    flex-direction: column;
+    row-gap:-10px ;
+}
 /* section titles */
 .section-title{
     font-family: "Agbalumo", system-ui;
-    font-size: 25pt;
+    font-size: 30px;
     background: linear-gradient(#c86c02, #FDC746);
     -webkit-background-clip: text;
             background-clip: text;
     -webkit-text-fill-color: transparent;
+    border-bottom: 0;
+    margin-left: 30px;
 }
 
 /* contains all movie poster divs */
 .container{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 /* div for one movie poster */
-.movie-poster-div{
+.container .movie-poster-div{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,6 +241,7 @@ header{
 /* image inside the movie poster div */
 .movie-poster-div img{
     width:200px;
+    height: 250px;
     border-radius: 20px;
 }
 
@@ -128,7 +250,19 @@ header{
     font-family:"Rethink Sans", sans-serif;
     color:#595656;
 }
-
+.container .movie-poster-div:last-of-type{
+    width:150px;
+    background: linear-gradient(#F9AC23, #444444);
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.container .movie-poster-div .bi bi-caret-right-fill{
+    color: whith;
+    font-size: 20px;
+}
 .categories-and-button-div{
     display: flex;
     flex-direction: column;
