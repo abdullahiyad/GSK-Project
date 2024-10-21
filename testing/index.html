@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="categories section">
+        <button onclick="loadPage('Action')">Action</button>
+        <button onclick="loadPage('Comedy')">Comedy</button>
+        <button onclick="loadPage('Horror')">Horror</button>
+        <button onclick="loadPage('Fantasy')">Fantasy</button>
+    </div>
+
+    <div class="movies section">
+        <button onclick="loadMoviePage(1)">Harry Potter</button>
+        <button onclick="loadMoviePage(2)">The Hobbit</button>
+        <button onclick="loadMoviePage(3)">Lord of the Rings</button>
+    </div>
+    <div class="link section">
+        <div class="link">
+            <label for="">Link: </label>
+            <div id="link-value"></div>
+        </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>
