@@ -7,6 +7,8 @@
     <title>Phoenix Movies</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../css/homePageStyles.css">
+    <!-- favicon -->
+     <link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon">
     <!-- Font Links -->
     <!-- Agbalumo Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +33,7 @@
         <nav>
             <ul>
                 <li><a class="navigation-links" href="./homePage.html">Home</a></li>
-                <li><a class="navigation-links" href="#aboutSection">About</a></li>
+                <li><a class="navigation-links" href="#trending-section">About</a></li>
                 <li class="movie-list">
                     <a class="navigation-links " href="./movies.html">Movies</a>
                     <ul class="movie-Categories" >
@@ -53,40 +55,50 @@
     </header>
     <main>
         <div id="hero-section-div">
-            <img src="../images/home page.png" alt="hero Section Image" width="800px" id="img">
-            <div class="right-side-content-div">
+            <div class="home-page-img" >
+                <img src="../images/home page.png" alt="hero Section Image" width="800px" id="img">
+            </div>
+            <div class="right-side-content-div" >
                 <h1 class="header-text-h1">Welcome to Phoenix<br>Movies</h1>
-                <h2 class="header-text-h2">Find, Search and enjoy movies like never before! <img src="../images/cut.png"
-                        alt="" width="100px"></h2>
+                <h2 class="header-text-h2">Find, Search and enjoy movies like never before!
+                     <img src="../images/cut.png"
+                        alt="" width="100px">
+                </h2>
                 <div class="search-bar-div">
-                    <i class="bi bi-search"></i>
-                    <input type="text" placeholder="Search Movies" id="search-bar">
+                    <div class="search-icon">
+                        <i class="bi bi-search"></i>
+                    </div>
+                    <input type="text" placeholder="Search here ..." id="search-bar">
                 </div>
             </div>
         </div>
-        <section class="trending-movies-section">
+        <section id="trending-section">
             <section id="trending-movies-section" class="sections">
-                <h1 class="trending-movies-section-title section-title">Trending Movies</h2>
+                <h2 class="trending-movies-section-title section-title">Trending Movies</h2>
                     <div class="container">
                         <div class="movie-poster-div">
                             <img src="../images/Testing images/film1.jpg">
-                            <h3>Movie Name</h4>
+                            <h3>Movie Name</h3>
                         </div>
                         <div class="movie-poster-div">
                             <img src="../images/Testing images/film2.jpg">
-                            <h3>Movie Name</h4>
+                            <h3>Movie Name</h3>
                         </div>
                         <div class="movie-poster-div">
                             <img src="../images/Testing images/film3.jpg">
-                            <h3>Movie Name</h4>
+                            <h3>Movie Name</h3>
                         </div>
                         <div class="movie-poster-div">
                             <img src="../images/Testing images/film4.jpg">
-                            <h3>Movie Name</h4>
+                            <h3>Movie Name</h3>
                         </div>
                         <div class="movie-poster-div">
                             <img src="../images/Testing images/film5.jpg">
-                            <h3>Movie Name</h4>
+                            <h3>Movie Name</h3>
+                        </div>
+                        <div class="movie-poster-div">
+                            <p>Explore More</p>
+                            <i class="bi bi-caret-right-fill"></i>
                         </div>
                     </div>
             </section>
@@ -113,10 +125,14 @@
                             <img src="../images/Testing images/film5.jpg">
                             <h3>Show Name</h4>
                         </div>
+                        <div class="movie-poster-div">
+                            <p>Explore More</p>
+                            <i class="bi bi-caret-right-fill"></i>
+                        </div>
                     </div>
             </section>
         </section>
-        <section id="categories-section" class="sections">
+        <!-- <section id="categories-section" class="sections">
             <h1 class="categories-section-title section-title">Categories</h2>
                 <div class="categories-and-button-div">
                     <div class="container">
@@ -142,7 +158,7 @@
         <section id="about-section" class="sections">
             <h1 class="about-section-title section-title">About Us</h2>
                 <h4>hello :D</h4>
-        </section>
+        </section> -->
     </main>
 </body>
 
