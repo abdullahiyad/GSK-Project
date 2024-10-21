@@ -1,4 +1,15 @@
-#trending-section{
+:root {
+    --color-black: #322d2d;
+    --color-white: #fcf9f7;
+    --color-yellow:#FDC746;
+    --color-orange: #f9ac23;
+    --color-dark-orange:#c86c02;
+    --font1: "Akatab", sans-serif;
+    --font2: "Agbalumo", system-ui;
+  }
+
+
+.trending-section{
     margin-top: 0;
     height: 100vh;
     display: flex;
@@ -6,9 +17,9 @@
 }
 
 .section-title{
-    font-family: "Agbalumo", system-ui;
+    font-family: var(--font2);
     font-size: 30px;
-    background: linear-gradient(#c86c02, #FDC746);
+    background: linear-gradient(var(--color-dark-orange), var(--color-yellow));
     -webkit-background-clip: text;
             background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -31,36 +42,31 @@
 /* image inside the movie poster div */
 .movie-poster-div img{
     width:200px;
-    /* height: 250px; */
     border-radius: 20px;
 }
 
 /* movie title inside movie poster div */
 .movie-poster-div h3{
-    font-family:"Rethink Sans", sans-serif;
-    color:#595656;
+    font-family: var(--font1);
+    color:var( --color-black);
 }
 .container .movie-poster-div:last-of-type{
     width:150px;
-    background: linear-gradient(#c86c02, #FDC746);
+    background: linear-gradient(var(--color-dark-orange), var(--color-yellow));
     height: 301px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
 }
-.container .movie-poster-div .bi bi-caret-right-fill{
-    color: whith;
-    font-size: 20px;
-}
 
 p{
-    font-family:"Rethink Sans", sans-serif;
-    color:white;
-    font-size:15pt;
+    font-family:var(--font1);
+    color:var(--color-white);
+    font-size:20px;
 }
 
 .bi-caret-right-fill{
-    font-size:30pt;
-    color:white;
+    font-size:35px;
+    color:var(--color-white);
 }
