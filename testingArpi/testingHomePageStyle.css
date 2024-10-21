@@ -1,0 +1,73 @@
+#trending-section{
+    margin-top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* #trending-movies-section{
+    height: 50% ;
+    display: flex;
+    flex-direction: column;
+    row-gap:-10px ;
+} */
+
+.section-title{
+    font-family: "Agbalumo", system-ui;
+    font-size: 30px;
+    background: linear-gradient(#c86c02, #FDC746);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 0;
+    margin-left: 30px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* div for one movie poster */
+.container .movie-poster-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* image inside the movie poster div */
+.movie-poster-div img{
+    width:200px;
+    /* height: 250px; */
+    border-radius: 20px;
+}
+
+/* movie title inside movie poster div */
+.movie-poster-div h3{
+    font-family:"Rethink Sans", sans-serif;
+    color:#595656;
+}
+.container .movie-poster-div:last-of-type{
+    width:150px;
+    background: linear-gradient(#c86c02, #FDC746);
+    height: 301px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.container .movie-poster-div .bi bi-caret-right-fill{
+    color: whith;
+    font-size: 20px;
+}
+
+p{
+    font-family:"Rethink Sans", sans-serif;
+    color:white;
+    font-size:15pt;
+}
+
+.bi-caret-right-fill{
+    font-size:30pt;
+    color:white;
+}
