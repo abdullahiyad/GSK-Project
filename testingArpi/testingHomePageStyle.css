@@ -1,0 +1,72 @@
+:root {
+    --color-black: #322d2d;
+    --color-white: #fcf9f7;
+    --color-yellow:#FDC746;
+    --color-orange: #f9ac23;
+    --color-dark-orange:#c86c02;
+    --font1: "Akatab", sans-serif;
+    --font2: "Agbalumo", system-ui;
+  }
+
+
+.trending-section{
+    margin-top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title{
+    font-family: var(--font2);
+    font-size: 30px;
+    background: linear-gradient(var(--color-dark-orange), var(--color-yellow));
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 0;
+    margin-left: 30px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* div for one movie poster */
+.container .movie-poster-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* image inside the movie poster div */
+.movie-poster-div img{
+    width:200px;
+    border-radius: 20px;
+}
+
+/* movie title inside movie poster div */
+.movie-poster-div h3{
+    font-family: var(--font1);
+    color:var( --color-black);
+}
+.container .movie-poster-div:last-of-type{
+    width:150px;
+    background: linear-gradient(var(--color-dark-orange), var(--color-yellow));
+    height: 301px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+p{
+    font-family:var(--font1);
+    color:var(--color-white);
+    font-size:20px;
+}
+
+.bi-caret-right-fill{
+    font-size:35px;
+    color:var(--color-white);
+}
