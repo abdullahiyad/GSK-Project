@@ -28,12 +28,18 @@
 }
 
 .container{
+    display:flex;
+    flex-direction: column;
+}
+
+.movies{
     display: flex;
-    justify-content: space-between;
+    justify-content:space-evenly;
+    margin-bottom: 40px;
 }
 
 /* div for one movie poster */
-.container .movie-poster-div{
+.movies .movie-poster-div{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,6 +49,7 @@
 .movie-poster-div img{
     width:200px;
     border-radius: 20px;
+    filter: brightness(50%);
 }
 
 /* movie title inside movie poster div */
@@ -50,23 +57,14 @@
     font-family: var(--font1);
     color:var( --color-black);
 }
-.container .movie-poster-div:last-of-type{
-    width:150px;
-    background: linear-gradient(var(--color-dark-orange), var(--color-yellow));
-    height: 301px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-}
 
-p{
-    font-family:var(--font1);
-    color:var(--color-white);
-    font-size:20px;
-}
-
-.bi-caret-right-fill{
-    font-size:35px;
-    color:var(--color-white);
+#see-all-movies-btn{
+    width: 90%;
+    height:300px;
+    margin:auto;
+    background-image: url(../images/TestingImages/film5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%);
 }

@@ -5,6 +5,8 @@
 :root {
   --color-black: #322d2d;
   --color-white: #fcf9f7;
+  --color-grey:#e3e3e3;
+  --color-dark-grey:#bcbcbc;
   --color-yellow: #fdc746;
   --color-orange: #f9ac23;
   --color-dark-orange: #c86c02;
@@ -167,16 +169,16 @@ main {
 }
 /* the welcome texts */
 .header-text-h1 {
-  font-family: "Agbalumo", system-ui;
-  color: #322d2d;
+  font-family: var(--font2);
+  color: var(--color-black);
   text-align: center;
   font-size: 60px;
   margin: 0px;
 }
 
 .header-text-h2 {
-  font-family: "Agbalumo", system-ui;
-  color: #545050;
+  font-family: var(--font2);
+  color: var(--color-black);
   font-size: 40px;
   margin-bottom: 40px;
 }
@@ -191,7 +193,7 @@ main {
   width: 60px;
   height: 60px;
   border-radius: 50px;
-  background-color: #e3e3e3;
+  background-color: var(--color-grey);
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -200,7 +202,7 @@ main {
 
 .bi-search {
   font-size: 35px;
-  color: #bcbcbc;
+  color: var(--color-dark-grey);
   cursor: pointer;
 }
 .search-bar-div input {
@@ -210,7 +212,7 @@ main {
   padding: 20px;
   width: 500px;
   border-radius: 50px;
-  background-color: #e3e3e3;
+  background-color: var(--color-grey);
 }
 .search-bar-div input::placeholder {
   font-size: 20px;
