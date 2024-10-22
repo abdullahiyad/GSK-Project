@@ -6,6 +6,8 @@
   --color-black: #322d2d;
   --color-dark-gray: #545050;
   --color-white: #fcf9f7;
+  --color-grey: #e3e3e3;
+  --color-dark-grey: #bcbcbc;
   --color-yellow: #fdc746;
   --color-orange: #f9ac23;
   --color-dark-orange: #c86c02;
@@ -184,6 +186,7 @@ header .theme-icon {
   padding-top: 30px;
 }
 /* the welcome texts */
+
 .hero-text1 {
   font-family: var(--font2);
   color: var(--color-black);
@@ -210,7 +213,7 @@ header .theme-icon {
   width: 60px;
   height: 60px;
   border-radius: 50px;
-  background-color: #e3e3e3;
+  background-color: var(--color-grey);
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -219,7 +222,7 @@ header .theme-icon {
 
 .bi-search {
   font-size: 35px;
-  color: #bcbcbc;
+  color: var(--color-dark-grey);
   cursor: pointer;
 }
 .search-bar input {
@@ -229,7 +232,7 @@ header .theme-icon {
   padding: 20px;
   width: 500px;
   border-radius: 50px;
-  background-color: #e3e3e3;
+  background-color: var(--color-grey);
 }
 .search-bar input::placeholder {
   font-size: 20px;

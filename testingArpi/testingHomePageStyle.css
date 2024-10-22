@@ -6,15 +6,9 @@
     --color-dark-orange:#c86c02;
     --font1: "Akatab", sans-serif;
     --font2: "Agbalumo", system-ui;
+    --font3: "Anta", sans-serif;
   }
 
-
-.trending-section{
-    margin-top: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
 
 .section-title{
     font-family: var(--font2);
@@ -27,46 +21,59 @@
     margin-left: 30px;
 }
 
-.container{
+.movies{
     display: flex;
-    justify-content: space-between;
+    justify-content:space-evenly;
+    margin-bottom: 40px;
 }
 
 /* div for one movie poster */
-.container .movie-poster-div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.movie-poster-div{
+    position: relative;
 }
 
 /* image inside the movie poster div */
 .movie-poster-div img{
     width:200px;
     border-radius: 20px;
+    filter: brightness(30%);
 }
 
-/* movie title inside movie poster div */
-.movie-poster-div h3{
-    font-family: var(--font1);
-    color:var( --color-black);
+.category-text{
+    font-family:var(--font3);
+    position:absolute;
+    left:50%;
+    top:40%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(var(--color-dark-orange), var(--color-white));
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 35px;
 }
-.container .movie-poster-div:last-of-type{
-    width:150px;
-    background: linear-gradient(var(--color-dark-orange), var(--color-yellow));
-    height: 301px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.see-all-movies-div{
+    position: relative;
+}
+
+.see-all-movies-div img{
+    filter: brightness(30%);
+    width:90%;
+    margin-left:80px;
+    height:300px;
+    object-fit: cover;
     border-radius: 20px;
 }
 
-p{
-    font-family:var(--font1);
-    color:var(--color-white);
-    font-size:20px;
-}
-
-.bi-caret-right-fill{
-    font-size:35px;
-    color:var(--color-white);
+.see-all-movies-div h3{
+    position:absolute;
+    left:50%;
+    top:40%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(var(--color-dark-orange), var(--color-white));
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family:var(--font3);
+    font-size: 60px;
 }
