@@ -243,14 +243,14 @@ main .left-side .glow-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: none;
+    border: 1px solid #f9ac23;
     background-color: #D9D9D9;
     color: #000;
     font-size: 20px;
     font-weight: 600;
     border-radius: 50px;
     cursor: pointer;
-    background-color: #f9ac23; /* Button color */  
+    background-color: transparent; /* Button color */  
     position: relative;
     overflow: hidden;
     transition: transform 0.3s;
@@ -283,10 +283,18 @@ main .left-side .glow-button {
 .glow-button span {
     position: relative;
     z-index: 1;
+    color: #f9ac23;
+}
+.glow-button:hover span {
+    color: black;
 }
 main .left-side button i{
+    color: #f9ac23;
     position: relative;
     font-size: 40px;
     margin-right: 10px;
     z-index: 1;
+}
+main .left-side button:hover i{
+    color: black;
 }
