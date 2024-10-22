@@ -6,15 +6,9 @@
     --color-dark-orange:#c86c02;
     --font1: "Akatab", sans-serif;
     --font2: "Agbalumo", system-ui;
+    --font3: "Anta", sans-serif;
   }
 
-
-.trending-section{
-    margin-top: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
 
 .section-title{
     font-family: var(--font2);
@@ -27,11 +21,6 @@
     margin-left: 30px;
 }
 
-.container{
-    display:flex;
-    flex-direction: column;
-}
-
 .movies{
     display: flex;
     justify-content:space-evenly;
@@ -39,32 +28,52 @@
 }
 
 /* div for one movie poster */
-.movies .movie-poster-div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.movie-poster-div{
+    position: relative;
 }
 
 /* image inside the movie poster div */
 .movie-poster-div img{
     width:200px;
     border-radius: 20px;
-    filter: brightness(50%);
+    filter: brightness(30%);
 }
 
-/* movie title inside movie poster div */
-.movie-poster-div h3{
-    font-family: var(--font1);
-    color:var( --color-black);
+.category-text{
+    font-family:var(--font3);
+    position:absolute;
+    left:50%;
+    top:40%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(var(--color-dark-orange), var(--color-white));
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 35px;
 }
 
-#see-all-movies-btn{
-    width: 90%;
+.see-all-movies-div{
+    position: relative;
+}
+
+.see-all-movies-div img{
+    filter: brightness(30%);
+    width:90%;
+    margin-left:80px;
     height:300px;
-    margin:auto;
-    background-image: url(../images/TestingImages/film5.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    filter: brightness(50%);
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.see-all-movies-div h3{
+    position:absolute;
+    left:50%;
+    top:40%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(var(--color-dark-orange), var(--color-white));
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family:var(--font3);
+    font-size: 60px;
 }
