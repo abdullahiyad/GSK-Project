@@ -335,7 +335,7 @@ input:focus {
   cursor: pointer;
   transition: 0.3s all;
   /*box-shadow: var(--box-shadow);
-  */:;
+  */
   -webkit-transition: 0.3s all;
   -moz-transition: 0.3s all;
   -ms-transition: 0.3s all;
@@ -512,7 +512,7 @@ p {
 h1 {
   font-size: 40px;
   font-family: var(--font2);
-  background: linear-gradient(#c86c02, #fdc746);
+  background: linear-gradient(var(--color-dark-orange), var(--color-yellow));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
