@@ -217,6 +217,10 @@ main {
     column-gap: 20px;
 }
 
+.movie-poster{
+    cursor: pointer;
+}
+
 .movie-poster img {
     width: 200px;
     border-radius: 15px;
