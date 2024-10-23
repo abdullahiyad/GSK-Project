@@ -47,8 +47,10 @@
                 <li><a class="nav-links" href="./favourites.html">My List</a></li>
             </ul>
         </nav>
-        <div class="theme-icon">
-            <i class="bi bi-brightness-high"></i>
+        <div class="theme-icon" onclick="changeTheme()">
+            <i id="light-icon" class=" bi bi-brightness-high"></i>
+            <i id="dark-icon" class="bi bi-moon-stars"></i>
+
         </div>
     </header>
     <main>
@@ -128,65 +130,40 @@
         <section class="category-section">
             <h2 class="section-title">Categories</h2>
             <div class="container">
-                <div class="movies">
-                    <div class="movie-poster-div">
-                        <img src="../images/TestingImages/film1.jpg">
-                        <h3 class="category-text">Animation</h3>
-                    </div>
-                    <div class="movie-poster-div">
-                        <img src="../images/TestingImages/film2.jpg">
-                        <h3 class="category-text">Thriller</h3>
-                    </div>
-                    <div class="movie-poster-div">
-                        <img src="../images/TestingImages/film3.jpg">
-                        <h3 class="category-text">Mystery</h3>
-                    </div>
-                    <div class="movie-poster-div">
-                        <img src="../images/TestingImages/film4.jpg">
-                        <h3 class="category-text">Horror</h3>
-                    </div>
-                    <div class="movie-poster-div">
-                        <img src="../images/TestingImages/film5.jpg">
-                        <h3 class="category-text">Fantasy</h3>
+                <div class="movie-type">
+                    <div class="movies">
+                        <div class="movie-poster-div">
+                            <img src="../images/TestingImages/film1.jpg">
+                            <h3 class="category-text">Animation</h3>
+                        </div>
+                        <div class="movie-poster-div">
+                            <img src="../images/TestingImages/film2.jpg">
+                            <h3 class="category-text">Thriller</h3>
+                        </div>
+                        <div class="movie-poster-div">
+                            <img src="../images/TestingImages/film3.jpg">
+                            <h3 class="category-text">Mystery</h3>
+                        </div>
+                        <div class="movie-poster-div">
+                            <img src="../images/TestingImages/film4.jpg">
+                            <h3 class="category-text">Horror</h3>
+                        </div>
+                        <div class="movie-poster-div">
+                            <img src="../images/TestingImages/film5.jpg">
+                            <h3 class="category-text">Fantasy</h3>
+                        </div>
                     </div>
                 </div>
-                <!-- <button id="see-all-movies-btn">See All Movies</button> -->
                 <div class="see-all-movies-div">
                     <img src="../images/TestingImages/film5.jpg">
                     <h3>See All Movies</h3>
                 </div>
+                <!-- <button id="see-all-movies-btn">See All Movies</button> -->
             </div>
         </section>
-        <!-- <section id="categories-section" class="sections">
-            <h1 class="categories-section-title section-title">Categories</h2>
-                <div class="categories-and-button-div">
-                    <div class="container">
-                        <div class="movie-poster">
-                            <img src="../images/TestingImages/film1.jpg">
-                        </div>
-                        <div class="movie-poster">
-                            <img src="../images/TestingImages/film2.jpg">
-                        </div>
-                        <div class="movie-poster">
-                            <img src="../images/TestingImages/film3.jpg">
-                        </div>
-                        <div class="movie-poster">
-                            <img src="../images/TestingImages/film4.jpg">
-                        </div>
-                        <div class="movie-poster">
-                            <img src="../images/TestingImages/film5.jpg">
-                        </div>
-                    </div>
-                    <button id="see-all-movies-btn">SEE ALL MOVIES</button>
-                </div>
-        </section>
-        <section id="about-section" class="sections">
-            <h1 class="about-section-title section-title">About Us</h2>
-                <h4>hello :D</h4>
-        </section> -->
         <section class="about">
-            <h1>About us</h1>
             <div class="about-content">
+                <h1>About us</h1>
                 <p>Welcome to Phoenix Movies, a streamlined platform designed for movie and TV show lovers. Our website
                     offers
                     an effortless way to explore trending titles and discover new favorites. We believe in simplicity,
@@ -201,9 +178,10 @@
                     Start your journey into the world of entertainment with us—your next favorite movie or show is just
                     a click
                     away!</p>
-                <img src="./image/rb_2150865999.png" width="auto" height="600px">
             </div>
+            <img src="../images/rb_2150865999.png" alt="">
         </section>
+
     </main>
     <footer>
         <div class="left-footer">
@@ -255,6 +233,7 @@
             </ul>
         </div>
     </footer>
+    <script src="../js/homePage.js"></script>
 
 </body>
 
