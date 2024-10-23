@@ -260,6 +260,7 @@ main img{
     width: 30%;
     height: 80vh;
     border-radius: 10px;
+
 }
 main .left-side{
     width: 60%;
@@ -300,6 +301,7 @@ main .left-side .tittle span:last-child{
 }
 main .left-side p{
     font-family:var(--font3) ;
+    color: var(--color-dark-gray);
     font-size: 25px;
     line-height: 1.5;
     margin-top: 50px;
