@@ -267,7 +267,7 @@ main {
     column-gap: 20px;
 }
 
-<<<<<<< HEAD
+
   
 /* div for one movie poster */
 .container .movie-poster {
@@ -281,12 +281,12 @@ main {
 }
   
 /* image inside the movie poster div */
-=======
+
 .movie-poster{
     cursor: pointer;
 }
 
->>>>>>> 4f2eef3b805475afe58db0e03f63f7a423ab5587
+
 .movie-poster img {
     transition: 0.3s all;
     width: 200px;
