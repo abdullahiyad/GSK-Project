@@ -12,9 +12,12 @@
   --color-yellow: #fdc746;
   --color-orange: #f9ac23;
   --color-dark-orange: #c86c02;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
   --font1: "Akatab", sans-serif;
   --font2: "Agbalumo", system-ui;
   --font3: "Anta", sans-serif;
+  --box-shadow: 0 32px 48px var(--color-light);
 }
 
 * {
@@ -101,7 +104,7 @@ header .nav-links:hover {
 }
 
 header .movie-list .movie-Categories {
-  background-color: var(--color-white);
+  /* background-color: var(--color-white); */
   border: 1px solid var(--color-black);
   border-top: none;
   border-bottom: none;
@@ -173,10 +176,11 @@ header .theme-icon {
   height: 90%;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .left-side .hero-img {
-  width: 100%;
+  width: 140%;
 }
 
 /* right side content of hero section */
@@ -224,13 +228,12 @@ header .theme-icon {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s, transform 0.3s;
 }
-.hero-section .right-side .search-bar .search-icon:hover{
+.hero-section .right-side .search-bar .search-icon:hover {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
   transform: scale(1.02);
 }
 .bi-search {
   font-size: 35px;
-  
 }
 .search-bar input {
   font-size: 20px;
@@ -275,18 +278,32 @@ input:focus {
 /* div for one movie poster */
 .container .movie-poster {
   text-align: center;
+  cursor: pointer;
+  transition: 0.3s all;
+  /*box-shadow: var(--box-shadow);
+  */:;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
 }
 
 /* image inside the movie poster div */
 .movie-poster img {
+    transition: 0.3s all;
   width: 180px;
   border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
+  box-shadow: var(--box-shadow);
 }
 
+.container .movie-poster:hover img {
+  
+  box-shadow: none;
+}
 /* movie title inside movie poster div */
 .movie-poster h3 {
   font-family: var(--font1);
@@ -317,7 +334,7 @@ p {
 
 /* categories section */
 
-.category-section{
+.category-section {
   margin-bottom: 100px;
 }
 .section-title {
@@ -330,7 +347,7 @@ p {
   border-bottom: 0;
   margin-left: 30px;
 }
-.category-section .container{
+.category-section .container {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -344,13 +361,30 @@ p {
 /* div for one movie poster */
 .movie-poster-div {
   position: relative;
+  cursor: pointer;
+  transition: 0.3s all;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
 }
 
 /* image inside the movie poster div */
 .movie-poster-div img {
   width: 200px;
   border-radius: 20px;
+  box-shadow: var(--box-shadow);
   filter: brightness(30%);
+  transition: 0.3s all;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
+}
+.movie-poster-div:hover img{
+  box-shadow: none;
+  filter: brightness(70%);
+  -webkit-filter: brightness(70%);
 }
 
 .category-text {
@@ -368,6 +402,8 @@ p {
 
 .see-all-movies-div {
   position: relative;
+  cursor: pointer;
+  
 }
 
 .see-all-movies-div img {
@@ -377,8 +413,19 @@ p {
   height: 300px;
   object-fit: cover;
   border-radius: 20px;
+  box-shadow: var(--box-shadow);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
 }
-
+.see-all-movies-div img:hover
+{
+  box-shadow: none;
+  filter: brightness(70%);
+  -webkit-filter: brightness(70%);
+}
 .see-all-movies-div h3 {
   position: absolute;
   left: 50%;
@@ -394,18 +441,18 @@ p {
 
 /* about section */
 
- .about{
+.about {
   display: flex;
   justify-content: flex-start;
- }
- .about .about-content {
+}
+.about .about-content {
   display: flex;
   flex-direction: column;
   margin-top: -80px;
   row-gap: 50px;
   margin-left: 30px;
 }
- h1 {
+h1 {
   font-size: 40px;
   font-family: var(--font2);
   background: linear-gradient(#c86c02, #fdc746);
@@ -465,6 +512,7 @@ footer .right-footer {
 }
 footer .right-footer ul {
   margin-left: 30px;
+  list-style-type: square;
 }
 footer .right-footer ul li {
   margin-bottom: 5px;
@@ -483,15 +531,19 @@ footer .right-footer a div {
   display: flex;
   justify-content: center;
   align-items: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 /* icons color */
 /* Facebook */
-.facebook {
+/* .facebook {
   background: linear-gradient(45deg, #3b5998, #8b9dc3);
 }
 
 /* Instagram */
-.instagram {
+/* .instagram {
   background: linear-gradient(
     45deg,
     #f58529,
@@ -500,14 +552,14 @@ footer .right-footer a div {
     #c13584,
     #8356b2
   );
-}
+} */
 
 /* LinkedIn */
-.linkedin {
+/* .linkedin {
   background: linear-gradient(45deg, #0077b5, #00a0dc);
-}
+} */
 
 /* Email */
-.email {
+/* .email {
   background: linear-gradient(45deg, #d44638, #f4b400);
-}
+}  */

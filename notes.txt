@@ -10,4 +10,6 @@ section{
 }
 # give trending titles some margin from top and bottom
 # minimize the gap between movies cards
-#
+# theres no need for flex in main tag "line 155" becuase the section tag is block display element
+# dont html style attribute in html file (width="800px") in hero section img
+# there no need to type of element in the class name .header-text-h2 => .header-text2
