@@ -94,7 +94,7 @@ header .movie-list .movie-Categories {
     display: none;
 }
 
-header .movie-list:hover .movie-Categories {
+header:hover .left-header .movie-list .movie-Categories {
     display: block;
 }
 
