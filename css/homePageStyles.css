@@ -316,6 +316,26 @@ input:focus {
 /* ------------------------------------------------------------------hero-section-div----------------------------------------------------------------- */
 /* Trending Section  */
 
+.section-top {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.trending-section .show-more-btn {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-size: 20px;
+  color: var(--color-yellow);
+  cursor: pointer;
+}
+
+.trending-section .show-more-btn:hover {
+  text-decoration: underline;
+}
+
 .section-title {
   font-family: var(--font2);
   font-size: 30px;
@@ -329,6 +349,7 @@ input:focus {
 .container {
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 10px;
 }
 
 /* div for one movie poster */
@@ -348,6 +369,7 @@ input:focus {
 .movie-poster img {
   transition: 0.3s all;
   width: 180px;
+  height: 270px;
   border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
@@ -359,12 +381,14 @@ input:focus {
 .container .movie-poster:hover img {
   box-shadow: none;
 }
+
 /* movie title inside movie poster div */
 .movie-poster h3 {
   font-family: var(--font1);
   color: var(--color-black);
 }
-.container .movie-poster:last-of-type {
+
+/* .container .movie-poster:last-of-type {
   width: 150px;
   height: 270px;
   background: linear-gradient(var(--color-dark-orange), var(--color-yellow));
@@ -373,19 +397,19 @@ input:focus {
   justify-content: space-evenly;
   align-items: center;
   border-radius: 20px;
-}
+} */
 
-p {
+/* p {
   font-family: var(--font3);
   color: var(--color-white);
   width: 50%;
   font-size: 20px;
-}
+} */
 
-.bi-caret-right-fill {
+/* .bi-caret-right-fill {
   font-size: 35px;
   color: var(--color-white);
-}
+} */
 
 /* categories section */
 
@@ -404,17 +428,46 @@ p {
 }
 .category-section .container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  /* flex-direction: column; */
   width: 100%;
+  align-items: center;
+  gap: 20px;
 }
-.movies {
+.categ-card {
+  width: 275px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-dark-orange);
+  color: var(--color-white);
+  box-shadow: var(--box-shadow);
+  font-size: 26px;
+  font-family: var(--font3);
+  font-weight: 400;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  cursor: pointer;
+}
+
+.categ-card:hover {
+  box-shadow: none;
+  background-color: var(--color-black);
+  color: var(--color-dark-orange);
+}
+/* .movies {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 40px;
-}
+} */
 
 /* div for one movie poster */
-.movie-poster-div {
+/* .movie-poster-div {
   position: relative;
   cursor: pointer;
   transition: 0.3s all;
@@ -422,7 +475,7 @@ p {
   -moz-transition: 0.3s all;
   -ms-transition: 0.3s all;
   -o-transition: 0.3s all;
-}
+} */
 
 /* image inside the movie poster div */
 .movie-poster-div img {

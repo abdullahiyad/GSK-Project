@@ -36,12 +36,7 @@
                 <li class="movie-list">
                     <a class="nav-links " href="./movies.html">Movies</a>
                     <ul class="movie-Categories">
-                        <li><a class="movie-Categories-link" href="#">Fantasy</a></li>
-                        <li><a class="movie-Categories-link" href="#">Horror</a></li>
-                        <li><a class="movie-Categories-link" href="#">Action</a></li>
-                        <li><a class="movie-Categories-link" href="#">Adventures</a></li>
-                        <li><a class="movie-Categories-link" href="#">Comedy</a></li>
-                        <li><a class="movie-Categories-link" href="#">See All Movies</a></li>
+
                     </ul>
                 </li>
                 <li><a class="nav-links" href="./favourites.html">My List</a></li>
@@ -72,93 +67,26 @@
             </div>
         </section>
         <section class="trending-section">
-            <h2 class="section-title">Trending Movies</h2>
-            <div class="container">
-                <div class="movie-poster">
-                    <img src="../images/TestingImages/film1.jpg">
-                    <h3>Movie Name</h3>
-                </div>
-                <div class="movie-poster">
-                    <img src="../images/TestingImages/film2.jpg">
-                    <h3>Movie Name</h3>
-                </div>
-                <div class="movie-poster">
-                    <img src="../images/TestingImages/film3.jpg">
-                    <h3>Movie Name</h3>
-                </div>
-                <div class="movie-poster">
-                    <img src="../images/TestingImages/film4.jpg">
-                    <h3>Movie Name</h3>
-                </div>
-                <div class="movie-poster">
-                    <img src="../images/TestingImages/film5.jpg">
-                    <h3>Movie Name</h3>
-                </div>
-                <div class="movie-poster">
-                    <p>Explore More</p>
-                    <i class="bi bi-caret-right-fill"></i>
-                </div>
+            <div class="section-top">
+                <h2 class="section-title">Trending Movies</h2>
+                <button class="show-more-btn">See More <i class="bi bi-arrow-right-circle"></i></button>
             </div>
-            <h1 class="section-title">Trending TV Shows</h2>
-                <div class="container">
-                    <div class="movie-poster">
-                        <img src="../images/TestingImages/film1.jpg">
-                        <h3>Show Name</h4>
-                    </div>
-                    <div class="movie-poster">
-                        <img src="../images/TestingImages/film2.jpg">
-                        <h3>Show Name</h4>
-                    </div>
-                    <div class="movie-poster">
-                        <img src="../images/TestingImages/film3.jpg">
-                        <h3>Show Name</h4>
-                    </div>
-                    <div class="movie-poster">
-                        <img src="../images/TestingImages/film4.jpg">
-                        <h3>Show Name</h4>
-                    </div>
-                    <div class="movie-poster">
-                        <img src="../images/TestingImages/film5.jpg">
-                        <h3>Show Name</h4>
-                    </div>
-                    <div class="movie-poster">
-                        <p>Explore More</p>
-                        <i class="bi bi-caret-right-fill"></i>
-                    </div>
-                </div>
+            <div class="container" id="trending-movies-container">
+
+
+            </div>
+            <div class="section-top">
+                <h2 class="section-title">Trending TV Show</h2>
+                <button class="show-more-btn">See More <i class="bi bi-arrow-right-circle"></i></button>
+            </div>
+            <div class="container" id="trending-tv-container">
+
+            </div>
         </section>
         <section class="category-section">
             <h2 class="section-title">Categories</h2>
-            <div class="container">
-                <div class="movie-type">
-                    <div class="movies">
-                        <div class="movie-poster-div">
-                            <img src="../images/TestingImages/film1.jpg">
-                            <h3 class="category-text">Animation</h3>
-                        </div>
-                        <div class="movie-poster-div">
-                            <img src="../images/TestingImages/film2.jpg">
-                            <h3 class="category-text">Thriller</h3>
-                        </div>
-                        <div class="movie-poster-div">
-                            <img src="../images/TestingImages/film3.jpg">
-                            <h3 class="category-text">Mystery</h3>
-                        </div>
-                        <div class="movie-poster-div">
-                            <img src="../images/TestingImages/film4.jpg">
-                            <h3 class="category-text">Horror</h3>
-                        </div>
-                        <div class="movie-poster-div">
-                            <img src="../images/TestingImages/film5.jpg">
-                            <h3 class="category-text">Fantasy</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="see-all-movies-div">
-                    <img src="../images/TestingImages/film5.jpg">
-                    <h3>See All Movies</h3>
-                </div>
-                <!-- <button id="see-all-movies-btn">See All Movies</button> -->
+            <div class="container" id="categories-container">
+
             </div>
         </section>
         <section class="about" id="about-section">
@@ -233,7 +161,7 @@
             </ul>
         </div>
     </footer>
-    <!-- <script src="../js/homePage.js"></script> -->
+    <script src="../js/homePage.js"></script>
     <script src="../js/darkMode.js"></script>
 
 </body>
