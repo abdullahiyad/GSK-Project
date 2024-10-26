@@ -7,7 +7,7 @@
   --color-dark-gray: #545050;
   --color-white: #fcf9f7;
   /* --color-grey: #e3e3e3; */
- 
+
   /* --color-dark-grey: #bcbcbc; */
   --color-yellow: #fdc746;
   --color-orange: #f9ac23;
@@ -19,11 +19,13 @@
   --font3: "Anta", sans-serif;
   --box-shadow: 0 32px 48px var(--color-light);
 }
-.dark-theme{
+html {
+  scroll-behavior: smooth;
+}
+.dark-theme {
   --color-black: #fcf9f7;
-  --color-white:#322d2d ;
-    --color-dark-gray: var(--color-black);
-
+  --color-white: #322d2d;
+  --color-dark-gray: var(--color-black);
 }
 
 * {
@@ -158,25 +160,25 @@ header .movie-list .movie-Categories li a:hover {
 }
 
 @keyframes theme-icon-animation {
-  1%{
-    .theme-icon i{
+  1% {
+    .theme-icon i {
       bottom: -22px;
       z-index: 1;
     }
   }
-  40%{
-    .theme-icon i{
-      bottom: -7px;  
+  40% {
+    .theme-icon i {
+      bottom: -7px;
     }
   }
-  70%{
-    .theme-icon i{
-      bottom: 20px;  
+  70% {
+    .theme-icon i {
+      bottom: 20px;
     }
   }
-  100%{
-    .theme-icon i{
-      bottom: 13px;  
+  100% {
+    .theme-icon i {
+      bottom: 13px;
     }
   }
 }
@@ -191,17 +193,17 @@ header .theme-icon {
   overflow: hidden;
   position: relative;
 }
-.theme-icon i{
+.theme-icon i {
   position: absolute;
   bottom: -30px;
   z-index: -1;
 }
-.theme-icon i.active{
+.theme-icon i.active {
   position: absolute;
   bottom: calc(18%);
   transition: 0.7s;
-  animation: theme-icon-animation 1s ;
-  -webkit-animation: theme-icon-animation 1s ;
+  animation: theme-icon-animation 1s;
+  -webkit-animation: theme-icon-animation 1s;
   -webkit-transition: 0.7s;
   -moz-transition: 0.7s;
   -ms-transition: 0.7s;
@@ -344,7 +346,7 @@ input:focus {
 
 /* image inside the movie poster div */
 .movie-poster img {
-    transition: 0.3s all;
+  transition: 0.3s all;
   width: 180px;
   border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -355,7 +357,6 @@ input:focus {
 }
 
 .container .movie-poster:hover img {
-  
   box-shadow: none;
 }
 /* movie title inside movie poster div */
@@ -435,10 +436,10 @@ p {
   -ms-transition: 0.3s all;
   -o-transition: 0.3s all;
 }
-.dark-theme .movie-poster-div img{
+.dark-theme .movie-poster-div img {
   box-shadow: 0 32px 48px var(--color-dark);
 }
-.movie-poster-div:hover img{
+.movie-poster-div:hover img {
   box-shadow: none;
   filter: brightness(70%);
   -webkit-filter: brightness(70%);
@@ -460,7 +461,6 @@ p {
 .see-all-movies-div {
   position: relative;
   cursor: pointer;
-  
 }
 
 .see-all-movies-div img {
@@ -478,7 +478,7 @@ p {
   -o-transition: 0.3s;
 }
 
-.see-all-movies-div:hover img{
+.see-all-movies-div:hover img {
   box-shadow: none;
   filter: brightness(70%);
   -webkit-filter: brightness(70%);
