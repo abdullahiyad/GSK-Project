@@ -15,7 +15,7 @@ const addHeaderMoviesLinks = async () => {
   console.log(data);
 
   data.genres.map((categ) => {
-    moviesLinksList.innerHTML += `<li><a class="movie-Categories-link" href="#">${categ.name}</a></li>`;
+    moviesLinksList.innerHTML += `<li><a class="movie-Categories-link" id="${categ.id}" onclick="openCategory(event)" href="#">${categ.name}</a></li>`;
   });
 };
 
@@ -42,7 +42,7 @@ const getCategories = async () => {
   const data = await res.json();
   data.genres.map((categ) => {
     categoriesContainer.innerHTML += `
-    <div class="categ-card">${categ.name}</div>
+    <div onclick="openCategory(event)" class="categ-card" id="${categ.id}">${categ.name}</div>
     `;
   });
 };
