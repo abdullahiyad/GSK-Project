@@ -160,7 +160,7 @@ header .movie-list .movie-Categories li a {
 header .movie-list .movie-Categories li a:hover {
   /* background-color: var(--color-dark-orange); */
   color: var(--color-orange);
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--color-light) 0px 3px 8px;
 }
 
 @keyframes theme-icon-animation {
