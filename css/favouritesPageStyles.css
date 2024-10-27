@@ -48,9 +48,16 @@ header {
 }
 
 .left-header {
+<<<<<<< HEAD
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+=======
   display: flex;
   justify-content: center;
   align-items: center;
+>>>>>>> a4add7e1f8c228556e2d841b3fa0bc8991a7223a
 }
 
 .header-logo {
@@ -93,8 +100,13 @@ header .movie-list .movie-Categories {
   display: none;
 }
 
+<<<<<<< HEAD
+header .left-header .movie-list:hover  .movie-Categories {
+    display: block;
+=======
 header .left-header:hover .movie-list .movie-Categories {
   display: block;
+>>>>>>> a4add7e1f8c228556e2d841b3fa0bc8991a7223a
 }
 
 header nav {
