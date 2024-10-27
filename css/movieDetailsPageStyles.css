@@ -51,6 +51,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 .header-logo {
@@ -94,7 +95,7 @@ header .movie-list .movie-Categories {
     display: none;
 }
 
-header:hover .left-header .movie-list .movie-Categories {
+header .left-header .movie-list:hover  .movie-Categories {
     display: block;
 }
 
