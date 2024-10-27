@@ -87,6 +87,10 @@ header .nav-links:hover {
     color: var(--color-orange);
 }
 
+header .left-header .movie-list:hover  .movie-Categories {
+    display: block;
+}
+
 
 header nav {
     height: 100%;
@@ -124,6 +128,7 @@ header .movie-list .movie-Categories {
 
 header .movie-list:hover .movie-Categories {
     display: grid;
+    z-index: 2;
 }
 
 header .movie-list .movie-Categories li {
