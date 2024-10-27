@@ -8,24 +8,24 @@ const searchByTemp = `https://api.themoviedb.org/3/search/movie?api_key=${API_KE
   term
 )}&page=1&include_adult=false`;
 let dataShow = [];
-// const moviesContainer = document.getElementById("container");
-// fetch(searchByTemp)
-//   .then((res) => res.json())
-//   .then((data) => console.log(data.results));
+const moviesContainer = document.getElementById("container");
+fetch(searchByTemp)
+  .then((res) => res.json())
+  .then((data) => console.log(data.results));
 
-// const fetchData = async () => {
-//   const res = await fetch(
-//     ``
-//   );
-//   const data = await res.json();
-//   dataShow = await data.results.map((ele) => {
-//     const imgUrl = `https://image.tmdb.org/t/p/w500${ele.poster_path}`;
+const fetchData = async () => {
+  const res = await fetch(
+    ``
+  );
+  const data = await res.json();
+  dataShow = await data.results.map((ele) => {
+    const imgUrl = `https://image.tmdb.org/t/p/w500${ele.poster_path}`;
 
-//     moviesContainer.innerHTML += `
-//       <div>
-//         <img src=${imgUrl}}/>
-//       <h4>${ele.title}</h4>
-//       </div>`;
-//   });
-// };
-// fetchData();
+    moviesContainer.innerHTML += `
+      <div>
+        <img src=${imgUrl}}/>
+      <h4>${ele.title}</h4>
+      </div>`;
+  });
+};
+fetchData();
