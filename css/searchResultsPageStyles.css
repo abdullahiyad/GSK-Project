@@ -287,6 +287,7 @@ header .right-header .theme-icon {
   gap: 30px 30px;
   flex-direction: row;
   justify-content: center;
+  padding-bottom: 25px;
 }
 
 /* div for one movie poster */
