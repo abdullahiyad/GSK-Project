@@ -17,6 +17,9 @@
   --font3: "Afacad", sans-serif;
   --box-shadow: 0 32px 48px var(--color-light);
 }
+html {
+  scroll-behavior: smooth;
+}
 .dark-theme {
   --color-black: #fcf9f7;
   --color-white: #322d2d;
@@ -36,7 +39,15 @@ body {
   -ms-transition: 0.3s all;
   -o-transition: 0.3s all;
 }
+section {
+  width: 100%;
+  min-height: 80vh;
+  height: fit-content;
+}
 
+main {
+  padding: 0 30px;
+}
 /* -------------------------------------------- Start header section--------------------------------------------------------------------------- */
 header {
   padding: 0 10px;
@@ -48,16 +59,15 @@ header {
 }
 
 .left-header {
-<<<<<<< HEAD
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-=======
+}
+.header-logo{
   display: flex;
   justify-content: center;
   align-items: center;
->>>>>>> a4add7e1f8c228556e2d841b3fa0bc8991a7223a
 }
 
 .header-logo {
@@ -88,27 +98,6 @@ header .nav-links {
 header .nav-links:hover {
   color: var(--color-orange);
 }
-header .movie-list .movie-Categories {
-  background-color: var(--color-white);
-  border: 1px solid var(--color-black);
-  border-top: none;
-  border-bottom: none;
-  position: absolute;
-  top: 50px;
-  width: fit-content;
-  height: fit-content;
-  display: none;
-}
-
-<<<<<<< HEAD
-header .left-header .movie-list:hover  .movie-Categories {
-    display: block;
-=======
-header .left-header:hover .movie-list .movie-Categories {
-  display: block;
->>>>>>> a4add7e1f8c228556e2d841b3fa0bc8991a7223a
-}
-
 header nav {
   height: 100%;
   display: flex;
@@ -129,21 +118,43 @@ header nav ul li {
   height: 100%;
   width: fit-content;
 }
+header .movie-list .movie-Categories {
+  background-color: var(--color-white);
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  display: none;
+  grid-template-columns: 250px 250px;
+  padding: 0;
+  top: 50px;
+  gap: 0;
+  box-shadow: var(--box-shadow);
+}
+
+header .movie-list:hover .movie-Categories {
+  display: grid;
+}
+/* header .left-header:hover .movie-list .movie-Categories {
+  display: block;
+ 
+} */
+
+
 
 header .movie-list .movie-Categories li {
   width: 100%;
-  height: 40px;
-  padding: 0 20px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  border-bottom: 2px solid var(--color-black);
+  height: 100%;
   font-weight: 600;
   font-family: var(--font1);
   font-size: 16px;
 }
 
 header .movie-list .movie-Categories li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   transition: 0.2s all;
   text-decoration: none;
   font-size: 18px;
@@ -152,10 +163,12 @@ header .movie-list .movie-Categories li a {
   -ms-transition: 0.2s all;
   -o-transition: 0.2s all;
   color: var(--color-black);
+  padding: 0 20px;
 }
 
 header .movie-list .movie-Categories li a:hover {
   color: var(--color-orange);
+  box-shadow: var(--color-light) 0px 3px 8px;
 }
 
 /* right header */
@@ -257,22 +270,22 @@ header .right-header .theme-icon {
 }
 
 /* main */
-main {
-  /* margin:20px 0px 0px 105px; */
-}
+
 
 .section-title {
+  padding: 0px 20px;
+  color: var(--color-black);
   font-family: var(--font2);
-  color: var(--color-dark-gray);
   font-size: 45px;
   margin-bottom: 50px;
 }
 
 .container {
-  display: inline-grid;
-  grid-template-columns: auto auto auto auto auto auto;
-  row-gap: 20px;
-  column-gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 30px;
+  flex-direction: row;
+  justify-content: center;
 }
 
 /* div for one movie poster */

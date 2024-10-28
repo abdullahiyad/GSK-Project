@@ -277,13 +277,11 @@ header .right-header .theme-icon {
 .section-title {
   padding: 0px 20px;
   color: var(--color-black);
-}
-
-.section-title {
   font-family: var(--font2);
   font-size: 45px;
   margin-bottom: 50px;
 }
+
 
 section .container {
   display: flex;
