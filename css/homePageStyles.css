@@ -727,7 +727,7 @@ footer .right-footer a div {
 /* .email {
   background: linear-gradient(45deg, #d44638, #f4b400);
 }  */
-header, main ,footer {
+header, main  {
   display: none; 
 }
 
