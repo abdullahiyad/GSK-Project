@@ -168,6 +168,7 @@ header .movie-list .movie-Categories li a:hover {
     justify-content: space-evenly;
     align-items: center;
     width: 20%;
+    height: 100%;
 }
 
 .search-bar-div {
@@ -273,7 +274,7 @@ header .right-header .theme-icon {
 main {
     margin: 20px 10%;
     display: flex;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 90px);
     justify-content: space-between;
 
 }
