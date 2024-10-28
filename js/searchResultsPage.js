@@ -20,9 +20,9 @@ const fetchData = async (link) => {
     const imgUrl = `https://image.tmdb.org/t/p/w500${ele.poster_path}`;
 
     moviesContainer.innerHTML += `
-    <div class="movie-poster">
+    <div class="movie-poster" style="text-align:center">
                     <img src=${imgUrl}}/>
-                    <h3>${ele.title}</h3>
+                    <h3 style="width:200px">${ele.title}</h3>
                 </div>
       `;
   });
