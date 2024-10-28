@@ -26,7 +26,6 @@ const toggleLightTheme = () => {
   darkThemeIcon.classList.remove("active");
   document.body.classList.remove("dark-theme");
   localStorage.setItem(THEME_KEY, "light");
-  console.log("Light theme applied");
 };
 
 // Toggle dark theme
@@ -35,7 +34,6 @@ const toggleDarkTheme = () => {
   lightThemeIcon.classList.remove("active");
   document.body.classList.add("dark-theme");
   localStorage.setItem(THEME_KEY, "dark");
-  console.log("Dark theme applied");
 };
 
 // Apply the correct theme when the page loads
