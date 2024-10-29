@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phoenix Movies</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/loading.css">
     <link rel="stylesheet" href="../css/homePageStyles.css">
     <link rel="stylesheet" href="../css/popup.css">
     <!-- favicon -->
@@ -63,17 +64,22 @@
                     <img src="../images/cut.png" alt="" width="100px">
                 </h2>
                 <div class="search-bar">
-                    <div class="search-icon">
+                    <div class="search-icon" onclick="openSearchResPage()">
                         <i class="bi bi-search"></i>
                     </div>
-                    <input type="text" placeholder="Search here ..." id="search-bar">
+                    <input type="text" placeholder="Search here ..." id="search-bar" oninput="searchApi(event)"
+                        onchange="clearList()" autocomplete="off">
+                    <ul class="search-res-list" id="search-res-list">
+
+                    </ul>
                 </div>
             </div>
         </section>
         <section class="trending-section">
             <div class="section-top">
                 <h2 class="section-title">Trending Movies</h2>
-                <button class="show-more-btn">See More <i class="bi bi-arrow-right-circle"></i></button>
+                <button class="show-more-btn" onclick="allTrendingMovies()">See More <i
+                        class="bi bi-arrow-right-circle"></i></button>
             </div>
             <div class="container" id="trending-movies-container">
 
@@ -81,7 +87,8 @@
             </div>
             <div class="section-top">
                 <h2 class="section-title">Trending TV Show</h2>
-                <button class="show-more-btn">See More <i class="bi bi-arrow-right-circle"></i></button>
+                <button class="show-more-btn" onclick="allTrendingTV()">See More <i
+                        class="bi bi-arrow-right-circle"></i></button>
             </div>
             <div class="container" id="trending-tv-container">
 
@@ -113,7 +120,6 @@
             </div>
             <img src="../images/rb_2150865999.png" alt="">
         </section>
-
     </main>
     <footer>
         <div class="left-footer">
@@ -165,7 +171,7 @@
             </ul>
         </div>
     </footer>
-    <!-- <div class="popup" id="moviePopup">
+    <div class="popup" id="moviePopup">
         <div class="popup-content">
             <span class="close-popup" id="closePopup">&times;</span>
             <img src="../images/TestingImages/film11.jpeg" alt="">
@@ -176,10 +182,10 @@
                     </h2>
                     <div class="rating">
                         <span>IMDb</span>
-                        <span class="score">8.4/10</span>
+                        <span class="score">7/10</span>
                     </div>
                 </div>
-                <p>
+                <p class="desc">
                     Bitten by a radioactive spider in the subway, Brooklyn teenager Miles Morales suddenly develops
                     mysterious powers that transform him into the one and only Spider-Man. When he meets Peter Parker,
                     he
@@ -196,16 +202,22 @@
             </div>
         </div>
 
-    </div> -->
+    </div>
+
     <button id="scrollToTopBtn" class="scroll-to-top" onclick="scrollToTop()"><i
             class="bi bi-arrow-up-circle-fill"></i></button>
+
+
+
     <script src="../js/ApiLinks.js"></script>
-    <script src="../js/addCategToHeader.js"></script>
-    <script src="../js/homePage.js"></script>
     <script src="../js/darkMode.js"></script>
-    <script src="../js/categories.js"></script>
     <script src="../js/loadingPage.js"></script>
-    <!-- <script src="../js/popup.js"></script> -->
+    <script src="../js/search.js"></script>
+    <script src="../js/homePage.js"></script>
+    <script src="../js/categories.js"></script>
+    <script src="../js/addCategToHeader.js"></script>
+    <script src="../js/popup.js"></script>
+
 </body>
 
 </html>

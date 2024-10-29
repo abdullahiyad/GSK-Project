@@ -55,14 +55,16 @@
                             <li><a class="movie-Categories-link" href="#">See All Movies</a></li> -->
                         </ul>
                     </li>
-                    <li><a class="nav-links" href="./favourites.html">My List</a></li>
+                    <li><a class="nav-links" href="./favouritesPage.html">My List</a></li>
                 </ul>
             </nav>
         </div>
         <div class="right-header">
             <div class="search-bar-div">
-                <i class="bi bi-search"></i>
-                <input type="text" placeholder="Search here ..." id="search-bar" oninput="SearchAPI()">
+                <i class="bi bi-search" onclick="openSearchResPage()"></i>
+                <input type="text" placeholder="Search here ..." id="search-bar" oninput="searchApi(event)"
+                    onchange="clearList()" autocomplete="off">
+                <ul class="search-res-list" id="search-res-list"></ul>
             </div>
             <div class="theme-icon" onclick="changeTheme()">
                 <i id="light-icon" class=" bi bi-brightness-high"></i>

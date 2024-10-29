@@ -1,8 +1,17 @@
+window.onload = async () => {
+  await getCategories();
+  await addHeaderMoviesLinks();
+  await fetchTrending(trendingMoviesContainer, trendingMovies);
+  await fetchTrending(trendingTVContainer, trendingTVShow);
+  loadingDisabled();
+};
+
 const trendingMoviesContainer = document.getElementById(
   "trending-movies-container"
 );
 const trendingTVContainer = document.getElementById("trending-tv-container");
 const categoriesContainer = document.getElementById("categories-container");
+
 // const moviesLinksList = document.querySelector(".movie-Categories");
 
 // const addHeaderMoviesLinks = async () => {
@@ -16,15 +25,23 @@ const categoriesContainer = document.getElementById("categories-container");
 const fetchTrending = async (container, fetchLink) => {
   const res = await fetch(fetchLink);
   const data = await res.json();
-  data.results.map((movie, index) => {
+  data.results.map((ele, index) => {
     if (index < 7) {
+      const imgUrl = `https://image.tmdb.org/t/p/w500${ele.poster_path}`;
+
       container.insertAdjacentHTML(
         "beforeend",
         `
-      <div class="movie-poster">
-      <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}">
-      <h3>${movie.title === undefined ? movie.name : movie.title}</h3>
-      </div>
+    <div class="movie-poster" style="text-align:center" onclick="getDetailsPage(event)" id="${
+      ele.id
+    }" title="${ele.title === undefined ? ele.name : ele.title}" rating="${
+          ele.vote_average
+        }" image="${imgUrl}" desc="${ele.overview}">
+                    <img src=${imgUrl}}/>
+                    <h3 style="width:200px">${
+                      ele.title === undefined ? ele.name : ele.title
+                    }</h3>
+                </div>
       `
       );
     }
@@ -40,10 +57,6 @@ const getCategories = async () => {
     `;
   });
 };
-getCategories();
-addHeaderMoviesLinks();
-fetchTrending(trendingMoviesContainer, trendingMovies);
-fetchTrending(trendingTVContainer, trendingTVShow);
 
 // Scroll to Top Button
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
@@ -67,3 +80,14 @@ function scrollToTop() {
     behavior: "smooth",
   });
 }
+
+//function to open all trending movies
+const allTrendingTV = () => {
+  updateLocalStorageLink("Trending TV Show", trendingTVShow);
+  window.location.href = "searchResultsPage.html";
+};
+
+const allTrendingMovies = () => {
+  updateLocalStorageLink("Trending Movies", trendingMovies);
+  window.location.href = "searchResultsPage.html";
+};
