@@ -49,7 +49,55 @@ section {
   padding: 30px;
   margin-bottom: 100px;
 }
+/* loading page style */
 
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  width: 100%;
+  height: 100vh;
+  /* padding: 30px; */
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  /* margin-left: 690px;
+  margin-top: 200px; */
+}
+
+.loading-container img {
+  width: 100px;
+}
+
+
+.loading-container .loader {
+  width: 100px;
+  aspect-ratio: 4;
+  --_g: no-repeat radial-gradient(circle closest-side, var(--color-orange) 90%, var(--color-white));
+  background:
+    var(--_g) 0% 50%,
+    var(--_g) 50% 50%,
+    var(--_g) 100% 50%;
+  background-size: calc(100%/3) 100%;
+  animation: l7 1s infinite linear;
+}
+
+@keyframes l7 {
+  33% {
+    background-size: calc(100%/3) 0%, calc(100%/3) 100%, calc(100%/3) 100%
+  }
+
+  50% {
+    background-size: calc(100%/3) 100%, calc(100%/3) 0%, calc(100%/3) 100%
+  }
+
+  66% {
+    background-size: calc(100%/3) 100%, calc(100%/3) 100%, calc(100%/3) 0%
+  }
+}
 /* -------------------------------------------- Start header section--------------------------------------------------------------------------- */
 header {
   padding: 0 10px;
@@ -679,3 +727,6 @@ footer .right-footer a div {
 /* .email {
   background: linear-gradient(45deg, #d44638, #f4b400);
 }  */
+header, main ,footer {
+  display: none; 
+}
