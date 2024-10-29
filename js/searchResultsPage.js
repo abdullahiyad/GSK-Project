@@ -3,9 +3,9 @@ window.onload = async () => {
   const title = localStorage.getItem(TITLE_KEY);
   await fetchData(link);
   await addHeaderMoviesLinks();
-  updatePageTitle(title);
+  await updatePageTitle(title);
   // loading page display none
-  loadingDisabled();
+  await loadingDisabled();
 };
 
 const fetchData = async (link) => {
@@ -19,7 +19,7 @@ const fetchData = async (link) => {
     moviesContainer.innerHTML += `
     <div class="movie-poster" style="text-align:center" onclick="getDetailsPage(event)" id="${
       ele.id
-    }" title="${ele.title}" rating="${
+    }" title="${ele.title === undefined ? ele.name : ele.title}" rating="${
       ele.vote_average
     }" image="${imgUrl}" desc="${ele.overview}">
                     <img src=${imgUrl}}/>

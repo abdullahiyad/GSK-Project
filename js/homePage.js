@@ -34,7 +34,7 @@ const fetchTrending = async (container, fetchLink) => {
         `
     <div class="movie-poster" style="text-align:center" onclick="getDetailsPage(event)" id="${
       ele.id
-    }" title="${ele.title}" rating="${
+    }" title="${ele.title === undefined ? ele.name : ele.title}" rating="${
           ele.vote_average
         }" image="${imgUrl}" desc="${ele.overview}">
                     <img src=${imgUrl}}/>

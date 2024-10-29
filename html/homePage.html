@@ -64,10 +64,14 @@
                     <img src="../images/cut.png" alt="" width="100px">
                 </h2>
                 <div class="search-bar">
-                    <div class="search-icon">
+                    <div class="search-icon" onclick="openSearchResPage()">
                         <i class="bi bi-search"></i>
                     </div>
-                    <input type="text" placeholder="Search here ..." id="search-bar" oninput="searchApi(event)">
+                    <input type="text" placeholder="Search here ..." id="search-bar" oninput="searchApi(event)"
+                        onchange="clearList()" autocomplete="off">
+                    <ul class="search-res-list" id="search-res-list">
+
+                    </ul>
                 </div>
             </div>
         </section>
