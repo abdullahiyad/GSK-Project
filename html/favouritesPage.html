@@ -47,7 +47,7 @@
             <nav>
                 <ul>
                     <li><a class="nav-links" href="./homePage.html">Home</a></li>
-                    <li><a class="nav-links" href="#trending-section">About</a></li>
+                    <li><a class="nav-links" href="./homePage.html#about-section">About</a></li>
                     <li class="movie-list">
                         <a class="nav-links " href="./movies.html">Movies</a>
                         <ul class="movie-Categories">
@@ -66,12 +66,13 @@
         <div class="right-header">
             <div class="search-bar-div">
                 <i class="bi bi-search"></i>
-                <input type="text" placeholder="Search here ..." id="search-bar" oninput="searchApi(event)" onchange="clearList()" autocomplete="off">
+                <input type="text" placeholder="Search here ..." id="search-bar" oninput="searchApi(event)"
+                    onchange="clearList()" autocomplete="off">
                 <ul class="search-res-list" id="search-res-list"></ul>
             </div>
             <div class="theme-icon" onclick="changeTheme()">
                 <i id="light-icon" class=" bi bi-brightness-high"></i>
-                <i id="dark-icon" class="bi bi-moon-stars"></i>   
+                <i id="dark-icon" class="bi bi-moon-stars"></i>
             </div>
         </div>
     </header>
@@ -81,7 +82,7 @@
                 Your Favourites
             </h1>
             <div class="container">
-                 <!-- <div class="movie-poster">
+                <!-- <div class="movie-poster">
                     <img src="../images/TestingImages/film14.jpeg">
                     <h3>Title</h3>
                 </div> -->
@@ -95,7 +96,7 @@
             <div class="left-side">
                 <div class="tittle">
                     <h2 class="spider">
-                        Spiderman: Into The Spiderverse
+                        Title
                     </h2>
                     <div class="rating">
                         <span>IMDb</span>
@@ -103,14 +104,7 @@
                     </div>
                 </div>
                 <p class="desc">
-                    Bitten by a radioactive spider in the subway, Brooklyn teenager Miles Morales suddenly develops
-                    mysterious powers that transform him into the one and only Spider-Man. When he meets Peter Parker,
-                    he
-                    soon realizes that there are many others who share his special, high-flying talents. Miles must now
-                    use
-                    his newfound skills to battle the evil Kingpin, a hulking madman who can open portals to other
-                    universes
-                    and pull different versions of Spider-Man into our world.
+                    Discription
                 </p>
                 <button class="glow-button">
                     <i class="bi bi-heart"></i>
@@ -120,14 +114,15 @@
         </div>
 
     </div>
-    
+
     <script src="../js/ApiLinks.js"></script>
-    <script src="../js/loadingPage.js"></script> 
-    <script src="../js/darkMode.js"></script> 
-    <script src="../js/categories.js"></script> 
+    <script src="../js/loadingPage.js"></script>
+    <script src="../js/darkMode.js"></script>
+    <script src="../js/categories.js"></script>
     <script src="../js/addCategToHeader.js"></script>
     <script src="../js/search.js"></script>
-    <script src="../js/favMovie.js"></script> 
     <script src="../js/popup.js"></script>
+    <script src="../js/favMovie.js"></script>
 </body>
+
 </html>
