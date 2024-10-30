@@ -9,12 +9,11 @@ let favList = JSON.parse(localStorage.getItem(FAV_KEY)) || [];
 let id;
 let isFav = false;
 let movie;
-
 const getDetailsPage = async (event) => {
   movie = await event.target.parentElement;
   moviePopup.style.display = "flex";
   title.textContent = movie.getAttribute("title");
-  rating.textContent = `${movie.getAttribute("rating")}/10`;
+  rating.textContent = `${Number(movie.getAttribute("rating")).toFixed(1)}/10`;
   desc.textContent = movie.getAttribute("desc");
   image.src = movie.getAttribute("image");
   id = await movie.getAttribute("id");
@@ -51,14 +50,16 @@ const toggleMovie = () => {
 const changeFavBtn = () => {
   if (isFav) {
     favBtn.innerHTML = `
-      <i class="bi bi-heart-fill"></i>
-      <span>Remove From Your List</span>
+      <i style="color: black;" class="bi bi-heart-fill"></i>
+      <span style="color: black;">Remove From Your List</span>
     `;
+    favBtn.classList.add("toggleFavorite");
   } else {
     favBtn.innerHTML = `
       <i class="bi bi-heart"></i>
       <span>ADD TO YOUR LIST</span>
     `;
+    favBtn.classList.remove("toggleFavorite");
   }
 };
 
